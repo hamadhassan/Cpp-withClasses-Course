@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    cout << "******************************" << endl;
+    cout << "*                            *" << endl;
+    cout << "*   H                  ^     *" << endl;
+    cout << "*    E                D      *" << endl;
+    cout << "*     L             L        *" << endl;
+    cout << "*       L          R         *" << endl;
+    cout << "*        O       O           *" << endl;
+    cout << "*          W   W             *" << endl;
+    cout << "*            -               *" << endl;
+    cout << "******************************" << endl;
+    cout << "Muhammad Hammad Hassan" << endl;
+    cout << "*******" << endl;
+    cout << "*******" << endl;
+    cout << "*******" << endl;
+    cout << "*******" << endl;
+    cout << "---------------------" << endl;
+    cout << "  *******" << endl;
+    cout << "*******" << endl;
+    cout << "  *******" << endl;
+    cout << "*******" << endl;
+    cout << "  *******" << endl;
+    cout << "---------------------" << endl;
+    cout << "*" << endl;
+    cout << "**" << endl;
+    cout << "***" << endl;
+    cout << "****" << endl;
+    cout << "*****" << endl;
+    cout << "******" << endl;
+    cout << "*******" << endl;
+    cout << "********" << endl;
+    cout << "---------------------" << endl;
+    cout << "**********" << endl;
+    cout << "*        *" << endl;
+    cout << "*        *" << endl;
+    cout << "*        *" << endl;
+    cout << "*        *" << endl;
+    cout << "*        *" << endl;
+    cout << "**********" << endl;
+    cout << "---------------------" << endl;
+    cout << "---------------------" << endl;
+    cout << "    *      ***        ****   ****        *       " << endl;
+    cout << "   * *     *   *     *       *   *      * *      " << endl;
+    cout << "  *   *    ***      *        *    *    *   *     " << endl;
+    cout << " * * * *   *   *      *      *   *    * * * *    " << endl;
+    cout << "*       *  ***         ***   ***     *        *  " << endl;
+}
