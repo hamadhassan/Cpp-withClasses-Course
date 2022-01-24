@@ -1,11 +1,22 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-// Write a C++ program to print half pyramid using *
 int main()
 {
-    cout << "*" << endl;
-    cout << "**" << endl;
-    cout << "***" << endl;
-    cout << "****" << endl;
-    cout << "*****";
+string country;
+float price;
+cout << "Enter Country name : ";
+cin>> country;
+cout << "Enter Ticket pice : " ;
+cin>> price;
+if(country=="ireland")
+{
+price=price-(price*0.10);
+}
+else
+{
+price=price-(price*0.05);
+}
+cout << "Price after discount is : "<<price<<endl;
+cout << "Thanks for using.";
+
 }
