@@ -1,17 +1,36 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 int main()
 {
-    /*A toy car accelerates from initial velocity to final velocity in some time. You have to write the C++
-    program for calculating the Final Velocity. Take initial velocity, acceleration and time as input from the
-    user and calculate the final velocity of the car and display on the screen.*/
-    int initial, final, time;
-    cout << "Enter the initial velocity:";
-    cin >> initial;
-    cout << "Enter the final velocity:";
-    cin >> final;
-    cout << "Enter the time taken:";
-    cin >> time;
-    final = (final - initial) / time;
-    cout << "The acceleration is:" << final << " meter square per second";
+//N for number and P for price 
+
+int Nred,Nwhite,Ntulips;
+float Pred,Pwhite,Ptulips,dis,price;
+
+cout << "Enter number of Red Rose : ";
+cin>> Nred;
+Pred=Nred*2.00;
+
+cout <<"Enter number of White Rose : ";
+cin>>Nwhite;
+Pwhite=Nwhite*4.10;
+
+cout <<"Enter number of Tulips : ";
+cin>>Ntulips;
+Ptulips=Ntulips*2.50;
+
+price=Pred+Pwhite+Ptulips;
+
+if(price>200)
+{
+dis=price*0.20;
+dis=price-dis;
+cout << "Original Price : "<< price<<endl;
+cout << "Price after Discount : "<< dis;
+}
+else 
+{
+cout << "Original Price : "<< price;
+}
+
 }
