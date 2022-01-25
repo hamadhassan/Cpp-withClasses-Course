@@ -1,14 +1,16 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 int main()
 {
-    /*Write a C++ program that takes the length of a rectangular fence in feet from the user and the width of
-     the fence in feet and then outputs its area on the screen.*/
-    int length, width;
-    cout << "Enter the length in feets:";
-    cin >> length;
-    cout << "Enter the width in feets:";
-    cin >> width;
-    length = length * width;
-    cout << "The area of rectangular is:" << length << "(feet^2)";
+float temp1,temp2,cal;
+cout<< "Enter City 1 Temperature: ";
+cin>> temp1;
+cout <<"Enter City 2 Temperature: ";
+cin>>temp2;
+cal=temp1-temp2;
+if(cal>10)
+{
+cout << "Difference is too Big";
+}
+cout << "Program End.";
 }
