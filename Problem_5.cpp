@@ -1,26 +1,28 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 int main()
 {
-    /*A teacher wants to calculate the students marks percentage, teachers have 5 subject marks for every
-    student. He needs a program that automates this process by asking 5 subjects' marks from the user and
-    calculating the percentage of students. Total marks are 500 for 5 subjects. To guide the user, first you
-    need to display a message and then take input from the user. Do it for all 5 subjects.*/
-    string name;
-    float n1, n2, n3, n4, n5, total;
-    cout << "Enter your name:";
-    cin >> name;
-    cout << "Enter 1st subject marks:";
-    cin >> n1;
-    cout << "Enter 2nd subject marks:";
-    cin >> n2;
-    cout << "Enter 3rd subject marks:";
-    cin >> n3;
-    cout << "Enter 4th subject marks:";
-    cin >> n4;
-    cout << "Enter 5th subject marks:";
-    cin >> n5;
-    total = n1 + n2 + n3 + n4 + n5;
-    total = total / 500 * 100;
-    cout << name << " obtained marks in percentage is:" << total << "%";
+int holidays,wrkdays,playtime,timeleft,hur,mint;
+cout << "Enter the Holidays : ";
+cin>> holidays;
+wrkdays=365-holidays;
+playtime=(wrkdays*63+holidays*127);
+timeleft=(30000-playtime);
+hur=timeleft/60;
+mint=timeleft%60;
+if(playtime<=30000)
+{
+cout <<"Tom Sleep Well."<<endl;
+cout<<hur<<" Hours and "<< mint<< " minutes less for play.";
+}
+else 
+{
+cout <<"Tom will run away."<<endl;
+hur=(hur*(-1));
+mint=(mint*(-1));
+cout<<hur<<" Hours and "<< mint<< " minutes for play.";
+}
+
+
+
 }
