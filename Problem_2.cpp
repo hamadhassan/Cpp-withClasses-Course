@@ -1,17 +1,12 @@
-#include<iostream>
-using namespace std;
-int main()
+n
 {
-int speed;
-cout << "Enter the speed of the Car :";
-cin>> speed;
-if(speed<=100)
+int price,dis,total;
+cout<< "Enter the price of item : ";
+cin>> price;
+if(price==500)
 {
-cout<< "Perfect! You are going good.";
+dis=(price*5/100);
+price=price-dis;
 }
-else 
-{
-cout << "Halt….YOU WILL BE CHALLANED!!!";
-}
-
+cout<<"Price after Discount : "<<price;
 }
