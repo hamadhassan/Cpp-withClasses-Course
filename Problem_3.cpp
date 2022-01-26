@@ -2,15 +2,24 @@
 using namespace std;
 int main()
 {
-float temp1,temp2,cal;
-cout<< "Enter City 1 Temperature: ";
-cin>> temp1;
-cout <<"Enter City 2 Temperature: ";
-cin>>temp2;
-cal=temp1-temp2;
-if(cal>10)
+int n;
+cout<< "Enter a number : ";
+cin>> n;
+if(n>=200)
 {
-cout << "Difference is too Big";
+int n1,n2,n3,n4,add,sub;
+cout<<"Enter first number : ";
+cin>>n1;
+cout<<"Enter second number : ";
+cin>>n2;
+cout<<"Enter third number : ";
+cin>>n3;
+cout<<"Enter fourth number : ";
+cin>>n4;
+add=n1+n2;
+sub=n3-n4;
+cout<<"The addition of first two number is : "<< add<<endl;;
+cout<<"The Subtraction of third and fourth number is : "<<sub<<endl;
 }
-cout << "Program End.";
+cout<<"Program End";
 }
