@@ -2,35 +2,22 @@
 using namespace std;
 int main()
 {
-//N for number and P for price 
-
-int Nred,Nwhite,Ntulips;
-float Pred,Pwhite,Ptulips,dis,price;
-
-cout << "Enter number of Red Rose : ";
-cin>> Nred;
-Pred=Nred*2.00;
-
-cout <<"Enter number of White Rose : ";
-cin>>Nwhite;
-Pwhite=Nwhite*4.10;
-
-cout <<"Enter number of Tulips : ";
-cin>>Ntulips;
-Ptulips=Ntulips*2.50;
-
-price=Pred+Pwhite+Ptulips;
-
-if(price>200)
+int n;
+cout<< "Enter a number : ";
+cin>> n;
+if(n>=200)
 {
-dis=price*0.20;
-dis=price-dis;
-cout << "Original Price : "<< price<<endl;
-cout << "Price after Discount : "<< dis;
+int n1,n2,n3,n4,ave;
+cout<<"Enter first number : ";
+cin>>n1;
+cout<<"Enter second number : ";
+cin>>n2;
+cout<<"Enter third number : ";
+cin>>n3;
+cout<<"Enter fourth number : ";
+cin>>n4;
+ave=(n1+n2+n3+n4)/4;
+cout<<"Average"<< ave;
 }
-else 
-{
-cout << "Original Price : "<< price;
-}
-
+cout<<endl<<"Program End";
 }
