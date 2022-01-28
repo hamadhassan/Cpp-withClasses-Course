@@ -2,18 +2,26 @@
 using namespace std;
 int main()
 {
-int n1,n2;
-cout << "Enter first number : ";
-cin>>n1;
-cout <<"Enter second number : ";
-cin>> n2;
-if(n1>n2)
-{
-cout << n1<<" is greater than " << n2;
-}
-else
-{
-cout << n2<<" is greater than "<< n1;
-}
-cout<< "Program End.";
+   int amount,dis,payable;
+   amount=dis=payable=0;
+   string day;
+    day="abc";
+   cout<< "Enter the Purchase Amount : ";
+   cin>> amount;
+   cout << "Enter the day : ";
+   cin>> day;
+   if(amount>=5000 && day=="sunday")
+   {
+       dis=amount*0.10;
+       payable=amount-dis;
+   }
+   else
+   {
+       dis=amount*0.05;
+       payable=amount-dis;
+   }
+   cout<< "------------------------"<<endl;
+   cout << "Discount is : "<< dis<<endl;
+   cout<< "Payable Amount : "<< payable<<endl;
+   cout<<"Thanks for using.";
 }
