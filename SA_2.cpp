@@ -1,18 +1,35 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-float cel,fah;
-cout << "Enter temperature fahrenheit: ";
-cin>> fah;
-cel=5/9*(fah-32);
-if(cel>=40)
-{
-cout << "Its hot today";
-}
-else 
-{
-cout << "Nice weather";
-}
-cout <<endl<< "Program End";
+    int n1,n2,n3;
+    cout<< "Enter First number : ";
+    cin>>n1;
+    cout << "Enter Second number : ";
+    cin>>n2;
+    cout <<"Enter Third number : ";
+    cin>> n3;
+    if(n1>n2)
+    {
+        if(n1>n3)
+        {
+            cout<<"First number is greater...";
+        }
+        else
+        {
+            cout<< "Third number is greater...";
+        }
+    }
+    else
+    {
+        if(n2>n3)
+        {
+            cout<< "Second number is greater...";
+        }
+        else
+        {
+            cout<<"Third number is greater...";
+        }
+    }
+    cout << endl<<"Program End.";
 }
