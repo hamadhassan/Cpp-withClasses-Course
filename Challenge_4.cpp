@@ -1,29 +1,24 @@
 #include <iostream>
 using namespace std;
+void eligibility(int age); // Function prototype or deceleration
 int main()
 {
-   int amount,dis,payable;
-   amount=dis=payable=0;
-   string day,month;
-    day=month="abc";
-   cout<< "Enter the Purchase Amount : ";
-   cin>> amount;
-   cout<<"Enter the month : ";
-   cin>>month;
-   cout << "Enter the day : ";
-   cin>> day;
-   if((month=="october"|| month=="marach" || month=="august") &&( day=="sunday"))
-   {
-       dis=amount*0.10;
-       payable=amount-dis;
-   }
-   else if((month=="november"|| month=="december")&& (day=="monday"))
-   {
-      dis=amount*0.05;
-       payable=amount-dis;
-   }
-   cout<< "------------------------"<<endl;
-   cout << "Discount is : "<< dis<<endl;
-   cout<< "Payable Amount : "<< payable<<endl;
-   cout<<"Thanks for using.";
+    /* A person is eligible to vote if his/her age is greater than or equal to 18. Define a function to find
+    out if he/she is eligible to vote.*/
+    int age;
+    cout << "Enter the age : ";
+    cin >> age;
+    eligibility(age); // function called
+}
+// Function definition
+void eligibility(int age)
+{ // function body
+    if (age >= 18)
+    {
+        cout << "Eligibile for vote ";
+    }
+    else
+    {
+        cout << "Not eligibile for vote ";
+    }
 }
