@@ -1,37 +1,83 @@
 #include <iostream>
 using namespace std;
+// Function prototype or deceleration
+void taxCalculator(char type, float price);
+// Main Function
 int main()
 {
-    int n,n1,n2,n3;
-    n=n1=n2=n3=0;
-    cout<<"Enter 1st number : ";
-    cin>> n1;
-    cout<<"Enter 2nd number : ";
-    cin>> n2;
-    cout<<"Enter 3rd number : ";
-    cin>> n3;
-    if(n1==n2 && n2==n3)
+    /*You’ve been hired by Automobile company to write a program to help the tax collector calculate
+    vehicle taxes. Vehicle taxes are based on two pieces of information; the price of the vehicle and
+    the vehicle type code.Vehicle Type Vehicle Code Tax Rate
+    Motorcycle M 6%  Electric E 8%  Sedan S 10%  Van V 12%  Truck T 15%
+    After the tax has been calculated, the program should display the following on the screen;
+    The final price on a vehicle of type xxx after adding the tax is $xxx.
+    with xxx replaced by the vehicle type and $xxx with the final price.
+    Your job is to write a function
+    float taxCalculator(char type, float price);
+    and then write the main function for taking the input from the user and then displaying
+    the final output. */
+    char type;   // Take vehicel data type
+    float price; // Take vehicle price
+    cout << "Enter vehicle code : ";
+    cin >> type;
+    cout << "Enter the price of vehicle : ";
+    cin >> price;
+    cout << "--------------------------------------" << endl;
+    taxCalculator(type, price); // function called
+}
+// Function definition
+void taxCalculator(char type, float price)
+{ // function body
+    float taxAmount, finalAmount;
+    string output;
+    string vehicleType;
+    // Motorcycle
+    if (type == 'M' || type == 'm')
     {
-        n=3;
+        vehicleType = "Motorcycle";
+        taxAmount = price * (0.06);
+        finalAmount = price + taxAmount;
+        cout << "The final price on a vehicle of type " << type << " after adding the tax is " << taxAmount << "$" << endl;
+        cout << "with " << vehicleType << " replaced by the vehicle type and " << finalAmount << "$ with the final price.";
     }
-    else if(n1==n2 || n2==n3)
+    // Electric
+    else if (type == 'E' || type == 'e')
     {
-        n=2;
+        vehicleType = "Electric";
+        taxAmount = price * (0.08);
+        finalAmount = price + taxAmount;
+        cout << "The final price on a vehicle of type " << type << " after adding the tax is " << taxAmount << "$" << endl;
+        cout << "with " << vehicleType << " replaced by the vehicle type and " << finalAmount << "$ with the final price.";
     }
-     else if(n1==n2 || n1==n3)
+    // Sedan
+    else if (type == 'S' || type == 's')
     {
-        n=2;
+        vehicleType = "Sedan";
+        taxAmount = price * (0.10);
+        finalAmount = price + taxAmount;
+        cout << "The final price on a vehicle of type " << type << " after adding the tax is " << taxAmount << "$" << endl;
+        cout << "with " << vehicleType << " replaced by the vehicle type and " << finalAmount << "$ with the final price.";
     }
-    else if(n1!=n2 && n2!=n3)
+    // Van
+    else if (type == 'V' || type == 'v')
     {
-        n=0;
+        vehicleType = "Van";
+        taxAmount = price * (0.12);
+        finalAmount = price + taxAmount;
+        cout << "The final price on a vehicle of type " << type << " after adding the tax is " << taxAmount << "$" << endl;
+        cout << "with " << vehicleType << " replaced by the vehicle type and " << finalAmount << "$ with the final price.";
     }
-    else if(n1!=n2 || n2!=n3)
+    // Truck
+    else if (type == 'T' || type == 't')
     {
-        n=0;
+        vehicleType = "Truck";
+        taxAmount = price * (0.15);
+        finalAmount = price + taxAmount;
+        cout << "The final price on a vehicle of type " << type << " after adding the tax is " << taxAmount << "$" << endl;
+        cout << "with " << vehicleType << " replaced by the vehicle type and " << finalAmount << "$ with the final price.";
     }
-   
-    cout<<"------------------------"<<endl;
-    cout<<n;
-
+    else
+    {
+        cout << "Invalid option";
+    }
 }
