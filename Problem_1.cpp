@@ -1,33 +1,104 @@
 #include <iostream>
 using namespace std;
+// Function prototype or deceleration
+string generation(int number, char gender);
+// Main Function
 int main()
 {
-    /* Write a C++ program to print the appropriate activity depending on the variable temperature and humidity
-    value. The table below assumes that the temperature can only be warm and cold, and the humidity can
-    only be dry and humid.*/
+    /*Try finding your ancestors and offspring with code.
+    Create a function that takes a number x and a character y (‘m’ for male, ‘f’ for female), and returns the
+    name of an ancestor (m/f) or descendant (m/f).
+    ● If the number is negative, return the related ancestor.
+    ● If positive, return the related descendant.
+    ● You are generation 0. In the case of 0 (male or female), return "me!" */
+    int number;
+    char gender;
+    string result;
+    cout << "Enter the generation number : ";
+    cin >> number;
+    cout << "Enter the generation gender (m for Male and f for Female) : ";
+    cin >> gender;
+    result = generation(number, gender); // function called
+    cout << result;
+}
+// Function definition
+string generation(int number, char gender)
+{ // function body
+    string result;
 
-    // Variable Deceleration
-    string temp, hum; //string data type varibale temperature, humidity
-    temp = hum = "";  // variable Inilizationa
-    cout << "Enter the temperatur: ";
-    cin >> temp;
-    cout << "Enter the humidity:";
-    cin >> hum;
-    // Conditions
-    if (temp == "warm" && hum == "dry")
+    //-3
+    if (number == -3 && gender == 'm')
     {
-        cout << "Play Tennis";
+        result = "great grandfather";
     }
-    else if (temp == "warm" && hum == "humid")
+    else if (number == -3 && gender == 'f')
     {
-        cout << "Swim";
+        result = "great grandmother";
     }
-    else if (temp == "cold" && hum == "dry")
+
+    //-2
+    else if (number == -2 && gender == 'm')
     {
-        cout << "Play basketball";
+        result = "grandfather";
     }
-    else if (temp == "cold" && hum == "humid")
+    else if (number == -2 && gender == 'f')
     {
-        cout << "Watch tv";
+        result = "grandmother";
     }
+
+    //-1
+    else if (number == -1 && gender == 'm')
+    {
+        result = "father";
+    }
+    else if (number == -1 && gender == 'f')
+    {
+        result = "mother";
+    }
+
+    // 0
+    else if (number == 0 && gender == 'm')
+    {
+        result = "me!";
+    }
+    else if (number == 0 && gender == 'f')
+    {
+        result = "me!";
+    }
+
+    // 1
+    else if (number == 1 && gender == 'm')
+    {
+        result = "son";
+    }
+    else if (number == 1 && gender == 'f')
+    {
+        result = "daughter";
+    }
+
+    // 2
+    else if (number == 2 && gender == 'm')
+    {
+        result = "grandson";
+    }
+    else if (number == 2 && gender == 'f')
+    {
+        result = "granddaughter";
+    }
+
+    // 3
+    else if (number == 3 && gender == 'm')
+    {
+        result = "great grandson";
+    }
+    else if (number == 3 && gender == 'f')
+    {
+        result = "great granddaughter";
+    }
+    // Invalid
+    else
+    {
+        result = "Invalid option ";
+    }
+    return result;
 }
