@@ -1,68 +1,57 @@
 #include <iostream>
 using namespace std;
+// Function prototype or deceleration
+string leapYear(int year);
+// Main Function
 int main()
 {
-    /*Write a Program to display an Astrological sign or a Zodiac sign for a given date of birth. Zodiac Signs
-    according to the dates and months
-    The program takes the date and month of birth as input, and then displays the astrological sign or Zodiac
-    sign according to that input. */
+    /* Create a function that takes 2 years as input, the difference between the years will be exactly 10. For
+    example if the first input is the year 2005 then the next input will be 2015. Your goal is to count how
+    many leap years there were between these 10 years and return that count from the function.
+    Test Cases:
+    countLeapYears(2010, 2020) ➞ 3
+    countLeapYears(2016, 2026) ➞ 3
+    countLeapYears(2005, 2015) ➞ 2
+    */
+    int year_1, year_2, counter;
+    string result_1, result_2;
 
-    int day;            //Input day
-    string month, sign; // Input month and Output sign of zodiac 
-    cout << "Please provide your data of birth..." << endl;
-    cout << "Enter Day : ";
-    cin >> day;
-    cout << "Enter Month name : ";
-    cin >> month;
-    // conditions 
-    if ((month == "March" && day >= 21 && day <= 31) || (month == "April" && day >= 1 && day <= 19))
+    cout << "Enter a year : ";
+    cin >> year_1;
+    cout << "Enter a year : ";
+    cin >> year_2;
+    result_1 = leapYear(year_1); // function called
+    result_2 = leapYear(year_2); // function called
+    if (result_1 == " is leap year" || result_2 == " is leap year")
     {
-        sign = "Aries";
+        counter = 3;
     }
-    else if ((month == "April" && day >= 20 && day <= 30) || (month == "May" && day >= 1 && day <= 20))
+    else
     {
-        sign = "Taurus";
+        counter = 2;
     }
-    else if ((month == "May" && day >= 21 && day <= 31) || (month == "June" && day >= 1 && day <= 20))
+    cout << counter << " leap yaer between them.";
+}
+// Function definition
+string leapYear(int year)
+{ // function body
+    string result;
+    if (year % 4 == 0 && year % 100 == 0 && year % 400 == 0)
     {
-        sign = "Gemini";
+        result = " is leap year";
     }
-    else if ((month == "June" && day >= 21 && day <= 30) || (month == "July" && day >= 1 && day <= 22))
+    else if (year % 4 == 0 && year % 100 != 0)
     {
-        sign = "Cancer";
+        result = " is leap year";
     }
-    else if ((month == "July" && day >= 23 && day <= 31) || (month == "August" && day >= 1 && day <= 22))
+    else if (year % 4 != 0)
     {
-        sign = "Leo";
+        result = " not leap year";
     }
-    else if ((month == "August" && day >= 23 && day <= 31) || (month == "September" && day >= 1 && day <= 22))
+    else if (year % 4 == 0 && year % 100 == 0 && year % 400 != 0)
     {
-        sign = "Virgo";
+        result = " not leap year";
     }
-    else if ((month == "September" && day >= 23 && day <= 30) || (month == "October" && day >= 1 && day <= 22))
-    {
-        sign = "Libra";
-    }
-    else if ((month == "October" && day >= 23 && day <= 31) || (month == "November" && day >= 1 && day <= 21))
-    {
-        sign = "Scorpio";
-    }
-    else if ((month == "November" && day >= 22 && day <= 30) || (month == "December" && day >= 1 && day <= 21))
-    {
-        sign = "Sagittarius";
-    }
-    else if ((month == "December" && day >= 22 && day <= 31) || (month == "January" && day >= 1 && day <= 19))
-    {
-        sign = "Capricorn";
-    }
-    else if ((month == "January" && day >= 20 && day <= 31) || (month == "February" && day >= 1 && day <= 18))
-    {
-        sign = "Aquarius";
-    }
-    else if ((month == "February" && day >= 19 && day <= 28) || (month == "March" && day >= 1 && day <= 20))
-    {
-        sign = "Pisces";
-    }
-    //Output 
-    cout << "Zodiac sign is: " << sign;
+    return result;
+    return result;
 }
