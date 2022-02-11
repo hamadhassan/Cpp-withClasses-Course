@@ -1,23 +1,28 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
-double QuraditicFormula(float a, float b, float c); // Function Prototype or function deceleration
+// prototype
+int totaldigit(int number, int digit);
+
 int main()
 {
-    /*Just put the values of a, b and c into the Quadratic Formula, and do the calculations. */
-    float a, b, c;
-    double x;
-    a = 5;
-    b = 6;
-    c = 1;
-    x = QuraditicFormula(a, b, c); // Fuction calling 
-    cout << x;
+    int number, digit, total;
+    cout << "Enter the number  : ";
+    cin >> number;
+    cout << "Enter the digit  : ";
+    cin >> digit;
+    total = totaldigit(number, digit); // function call
+    cout << "Total digits are : " << total;
 }
-// User difined function
-
-double QuraditicFormula(float a, float b, float c) // Function Definition
-{                                                  // Function Body
-    double result;
-    result = (-b + sqrt(pow(b, 2) - (4 * a * c))) / (2 * a);
-    return result;
+// function definition
+int totaldigit(int number, int digit)
+{
+    int cout = 0;
+    for (int i = number; i != 0; i = i / 10) // divider drop the last digit 
+    {
+        if (i % 10 == digit)// modulus give the last digit 
+        {
+            cout++;
+        }
+    }
+    return cout;
 }
