@@ -1,18 +1,24 @@
 #include <iostream>
 using namespace std;
-/* [Display name ten times */
-// Function Prototype
-void name();
+void amplify();
 int main()
 {
-    cout << "Name is printed ten times." << endl;
-    name(); // function call
+    amplify();
 }
-// Function Definition
-void name()
+void amplify()
 {
-    for (int i = 1; i <= 10; i++)
+
+    int num, multiply, sequence;
+    multiply = 1;
+    num = 25;
+    for (int n = 1; n <= num; n++)
     {
-        cout << "Name: Muhammad Hammad Hassan" << endl;
+        sequence = n;
+
+        if (sequence % 4 == 0)
+        {
+            multiply = sequence * 10;
+            cout << " " << multiply;
+        }
     }
 }
