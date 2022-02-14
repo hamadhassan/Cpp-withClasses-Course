@@ -1,35 +1,25 @@
 #include <iostream>
 using namespace std;
+// prototype
+int factorial(int number);
+
 int main()
 {
-    int n1,n2,n3;
-    cout<< "Enter First number : ";
-    cin>>n1;
-    cout << "Enter Second number : ";
-    cin>>n2;
-    cout <<"Enter Third number : ";
-    cin>> n3;
-    if(n1>n2)
+    int n, result;
+    n = result = 0;
+    cout << "Enter the number : ";
+    cin >> n;
+    result = factorial(n); // function called
+    cout << "Factorial is : " << result;
+}
+// definition
+int factorial(int number)
+{
+    int factorial;
+    factorial = 1;
+    for (number; number > 0; number--)
     {
-        if(n1>n3)
-        {
-            cout<<"First number is greater...";
-        }
-        else
-        {
-            cout<< "Third number is greater...";
-        }
+        factorial = factorial * number;
     }
-    else
-    {
-        if(n2>n3)
-        {
-            cout<< "Second number is greater...";
-        }
-        else
-        {
-            cout<<"Third number is greater...";
-        }
-    }
-    cout << endl<<"Program End.";
+    return factorial;
 }
