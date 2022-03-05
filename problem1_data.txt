@@ -1,0 +1,3 @@
+Distance is : 30
+Time  is : 4
+Speed is : 7
