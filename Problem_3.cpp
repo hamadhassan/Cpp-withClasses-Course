@@ -1,25 +1,39 @@
 #include <iostream>
+#include <fstream>
 using namespace std;
-
+int secretCode(string code);
+void readData();
+string sepreatedData(string record, int field);
+void DisplayData();
 int main()
 {
-    int days, doctor, patient, trated, un_treated, totalcapacity, totalpatient;
-    doctor = 7;
-    cout << "Enter the days : ";
-    cin >> days;
-    for (int n = 1; n <= days; n++)
+    string code;
+    cout << "Enter words : ";
+    cin >> code;
+    cout << secretCode(code);
+    //  readData();
+    // DisplayData();
+}
+int secretCode(string code)
+{
+    int letter;
+    for (int i = 0; i < code.length(); i++)
     {
-        cout << "Enter the patients : ";
-        cin >> patient;
-        if (n % 3 == 0)
-        {
-            if (un_treated > doctor)
-            {
-                totalcapacity = doctor + 1;
-            }
-        }
-        int rem = doctor - patient;
-        un_treated += rem;
-        totalpatient = totalpatient + patient;
+        letter = code[i];
+        return letter;
     }
+}
+void readData()
+{
+    string record;
+    char letter;
+    fstream read;
+    read.open("Problem_3Data.txt", ios::in);
+    while (!(read.eof()))
+    {
+        getline(read, record, ',');
+        letter = stoi(record);
+    }
+    cout << letter;
+    read.close();
 }
