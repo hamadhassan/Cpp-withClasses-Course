@@ -12,12 +12,12 @@ The daily task of each week is push on the github  repositories .
  The major projects under CS-161 course are as under
 
 ### Business Applications
- - [Uinversity Student Diary Managment System](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [University Admission Managment System](https://github.com/matiassingers/awesome-readme)
+ - [Uinversity Student Diary Management System](https://github.com/hamadhassan/University-Student-Diary-Management-System)
+ - [University Admission Management System](https://github.com/hamadhassan/University-Admission-Management-System)
 ### Game Applications
- - [VidyaKali](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Packman](https://github.com/matiassingers/awesome-readme)
- - [TicTakToe](https://github.com/matiassingers/awesome-readme)
+ - [VidyaKali](https://github.com/hamadhassan/Vidyakali)
+ - [Packman](https://github.com/hamadhassan/Packman)
+ - [TicTakToe](https://github.com/hamadhassan/Tic-Tac-Toe)
 
 ## Syllabus 
 - Week 01 :- Expression 
