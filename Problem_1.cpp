@@ -1,73 +1,14 @@
 #include <iostream>
-#include <fstream>
 using namespace std;
-void getBirthdayCake(string name, int age);     // write data
-void readData();                                // read data
-string sepreatedData(string record, int field); // read the comma sperated file and return the field block
-void DisplayData();                             // display data according to the formate
-string names;
-int ages;
+int cars[5][5] = {{1, 2, 3, 4, 5}, {1, 3, 5, 6, 7}, {1, 5, 7, 9, 2}, {1, 4, 2, 4, 3}, {1, 2, 4, 5, 6}};
 int main()
 {
-    string name;
-    int age;
-    cout << "Enter name : ";
-    cin >> name;
-    cout << "Enter age : ";
-    cin >> age;
-    getBirthdayCake(name, age);
-    readData();
-    DisplayData();
-}
-void getBirthdayCake(string name, int age)
-{
-    fstream write;
-    write.open("Problem_1Data.txt", ios::out);
-    write << name << "," << age;
-    write.close();
-} // end of data write
-void readData()
-{
-    string record;
-    fstream read;
-    read.open("Problem_1Data.txt", ios::in);
-    while (!(read.eof()))
+    for (int x = 0; x < 5; x++)
     {
-        getline(read, record);
-        names = sepreatedData(record, 1);
-        ages = stoi(sepreatedData(record, 2));
-    }
-    read.close();
-}
-string sepreatedData(string record, int field)
-{
-    int count = 1;
-    string value;
-    for (int i = 0; i < record.length(); i++)
-    {
-        if (record[i] == ',')
+        for (int y = 0; y < 5; y++)
         {
-            count++;
+            cout << cars[x][y] << "\t";
         }
-        else if (count == field)
-        {
-            value = value + record[i];
-        }
-    }
-    return value;
-}
-void DisplayData()
-{
-    if (ages % 2 == 0)
-    {
-        cout << "###############" << endl;
-        cout << "# " << ages << " HB " << names << "! " << ages << " #" << endl;
-        cout << "###############" << endl;
-    }
-    else
-    {
-        cout << "***************" << endl;
-        cout << "* " << ages << " HB " << names << "! " << ages << " *" << endl;
-        cout << "***************" << endl;
+        cout << endl;
     }
 }
