@@ -1,7 +1,12 @@
 #include <iostream>
 using namespace std;
+/*Write a program that assigns address of integer variable to pointer variable
+using & operator.*/
 int main()
 {
-    string arr = "Hello\0 World";
-    cout << arr;
+    int a = 0;
+    int *p;
+    p = &a;
+    cout << "Address of variable a : " << &a << endl;
+    cout << "Address of variable a : " << p;
 }
