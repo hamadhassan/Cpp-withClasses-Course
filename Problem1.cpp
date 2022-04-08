@@ -1,20 +1,23 @@
 #include <iostream>
-#include <conio.h>
-#include <fstream>
 using namespace std;
+bool input(string inputString)
+{
+    string newWord = "";
+    if (inputString.length() >= 1 && inputString.length() <= 5)
+    {
+        int length = inputString.length();
+        for (int i = length - 1; i >= 0; i--)
+        {
+            newWord += inputString[i];
+        }
+        if (newWord == inputString)
+        {
+            return true;
+        }
+    }
+    return false;
+}
 int main()
 {
-    int distance, time, speed;
-    cout << "Enter the distance : ";
-    cin >> distance;
-    cout << "Enter the time : ";
-    cin >> time;
-    speed = distance / time;
-    fstream newFile;
-    newFile.open("problem1_data.txt", ios::out); // write mode
-    newFile << "Distance is : " << distance << "\n";
-    newFile << "Time  is : " << time << "\n";
-    newFile << "Speed is : " << speed << "\n";
-    cout << "Speed is : " << speed;
-    newFile.close();
+    cout << "Output: " << input("hlbeeykoqqqqokyeeblh");
 }
